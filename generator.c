@@ -5,8 +5,8 @@
 
 void check_matrix(float matrix[20][20], int x, int y)
 {//checar o entorno do ponto
-    if(matrix[x][y-1] < 20.0 && matrix[x][y+1] < 20 && matrix[x-1][y] < 20 && matrix[x+1][y] < 20.0)
-    {
+    if(matrix[x][y-1] < 20.0 && matrix[x][y+1] < 20 && matrix[x-1][y] < 20 && matrix[x+1][y] < 20.0) // checa os pontos no entorno do ponto detectado na função main      
+    {// melhorar essa função pois caso x ou y sejam 0, não há coordenadas negativas
         printf("valor x: %d valor y:%d valor_matriz: %.1f", x, y, matrix[x][y]);
     }
 }
