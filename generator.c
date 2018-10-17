@@ -2,6 +2,15 @@
 #include <stdlib.h>
 
 
+
+void check_matrix(float matrix[20][20], int x, int y)
+{
+    if(matrix[x][y-1] < 20.0)
+    {
+        printf("valor x: %d valor y:%d valor_matriz: %.1f", x, y, matrix[x][y-1]);
+    }
+}
+
 int main() {
     
     int x,y,postions = 20;
@@ -20,7 +29,12 @@ int main() {
     {
         for(x=0;x < postions; x++)
         {
-            printf("%.1f ", teste[x][y]);
+            if(teste[x][y] < 20.0)
+            {
+            //printf("%.1f ", teste[x][y]);
+                check_matrix(teste, x, y);
+                printf("%c",'\n');
+            }
         }
         printf("%c",'\n');
     }
